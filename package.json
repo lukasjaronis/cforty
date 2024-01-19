@@ -1,20 +1,24 @@
 {
-  "name": "cforty",
+  "name": "cforty-workspace",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "pnpm biome format . --write",
+    "clean": "turbo run clean",
+    "build:cli": "pnpm --filter cli build",
+    "dev:api": "pnpm --filter api dev"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "prettier": "^3.1.1",
+    "@biomejs/biome": "^1.5.2",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
   }
 }
