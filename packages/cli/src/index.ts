@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { askInit } from "./prompts/init.prompt";
 import { config } from "./utils/config";
