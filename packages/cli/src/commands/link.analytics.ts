@@ -17,10 +17,13 @@ export const linkAnalytics = new Command()
 		const slug = await askForAnalytics();
 
 		spinner.start("Fetching slug...");
-		const result = await execa("curl", buildCurl({
-			method: "GET",
-			endpoint: `/api/analytics/${slug}`,
-		}));
+		const result = await execa(
+			"curl",
+			buildCurl({
+				method: "GET",
+				endpoint: `/api/analytics/${slug}`,
+			}),
+		);
 
 		const json = JSON.parse(result.stdout) as TAPIResponse<{ link: TLink }>;
 

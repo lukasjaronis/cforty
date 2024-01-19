@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "cforty-cli",
   "version": "1.0.0",
   "description": "A CLI for Cforty.",
   "type": "module",
@@ -9,7 +9,8 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "start": "node dist/index.js",
-    "format": "pnpm biome format . --write"
+    "format": "pnpm biome format . --write",
+    "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta"
   },
   "author": "Lukas Jaronis",
   "license": "ISC",

@@ -23,10 +23,10 @@ export const linkCreate = new Command()
 				method: "POST",
 				endpoint: "/api/create",
 				body,
-			})
+			}),
 		);
 
-		const json = JSON.parse(result.stdout) as TAPIResponse<{ url: string }>
+		const json = JSON.parse(result.stdout) as TAPIResponse<{ url: string }>;
 
 		spinner.stop();
 		clipboardy.writeSync(`${json.data.url}`);
