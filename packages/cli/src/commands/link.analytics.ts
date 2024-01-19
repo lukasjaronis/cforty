@@ -3,7 +3,6 @@ import { Command } from "commander";
 import { execa } from "execa";
 import { buildCurl } from "../utils/buildCurl";
 import { askForAnalytics } from "../prompts/link.analytics.prompt";
-import Table from "cli-table3";
 import { TAPIResponse, TLink } from "../models";
 
 export const linkAnalytics = new Command()
@@ -26,11 +25,4 @@ export const linkAnalytics = new Command()
 		const json = JSON.parse(result.stdout) as TAPIResponse<{ link: TLink }>;
 
 		spinner.stop();
-		const table = new Table();
-
-		Object.entries(json.data.link as TLink).forEach(([key, value]) =>
-			table.push({ [key]: value }),
-		);
-
-		console.log(table.toString());
 	});
