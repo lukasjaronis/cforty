@@ -10,7 +10,7 @@ import clipboardy from "clipboardy";
 export const linkCreate = new Command()
 	.name("create")
 	.description("create a new short link")
-	.action(async (opts) => {
+	.action(async () => {
 		const spinner = ora();
 
 		const body = await askCreateLink();
