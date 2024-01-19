@@ -1,10 +1,16 @@
 {
   "name": "cforty-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI for Cforty.",
   "type": "module",
   "exports": "./dist/index.js",
   "bin": "./dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -15,7 +21,7 @@
     "pub:release": "pnpm build && pnpm publish --access public"
   },
   "author": "Lukas Jaronis",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.5.2",
     "@clack/core": "^0.3.3",
@@ -27,6 +33,7 @@
   },
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
+    "cforty-cli": "link:",
     "cli-table3": "^0.6.3",
     "clipboardy": "^4.0.0",
     "commander": "^11.1.0",
