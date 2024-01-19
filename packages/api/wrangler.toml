@@ -1,0 +1,13 @@
+name = "cforty-api"
+main = "src/index.ts"
+compatibility_date = "2023-12-18"
+compatibility_flags = [ "nodejs_compat"]
+keep_vars = true
+
+[dev]
+port = 8080
+
+[[d1_databases]]
+binding = "CFORTY_DB" 
+database_name = "CFORTY_DB"
+database_id = "596d7148-0d38-4935-bede-744947197ca2"

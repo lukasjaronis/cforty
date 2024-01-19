@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "gen": "drizzle-kit generate:sqlite",
+    "drop": "wrangler d1 execute CFORTY_DB --command \"DROP TABLE links;\"",
+    "migrate": "wrangler d1 execute CFORTY_DB --file ./migrations/0000_wakeful_typhoid_mary.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240117.0",
+    "drizzle-kit": "^0.20.13",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.23.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.29.3",
+    "hono": "^3.12.6"
+  }
+}
