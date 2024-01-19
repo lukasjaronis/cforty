@@ -1,4 +1,3 @@
-import * as zod from "zod";
 import ora from "ora";
 import { Command } from "commander";
 import { execa } from "execa";

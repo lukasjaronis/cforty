@@ -10,7 +10,9 @@
     "build": "tsup",
     "start": "node dist/index.js",
     "format": "pnpm biome format . --write",
-    "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta"
+    "typecheck": "tsc --noEmit",
+    "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
+    "pub:release": "pnpm build && pnpm publish --access public"
   },
   "author": "Lukas Jaronis",
   "license": "ISC",

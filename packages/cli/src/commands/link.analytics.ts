@@ -1,10 +1,8 @@
-import * as zod from "zod";
 import ora from "ora";
 import { Command } from "commander";
 import { execa } from "execa";
 import { buildCurl } from "../utils/buildCurl";
 import { askForAnalytics } from "../prompts/link.analytics.prompt";
-import { log } from "../utils/log";
 import Table from "cli-table3";
 import { TAPIResponse, TLink } from "../models";
 
